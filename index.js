@@ -2,11 +2,11 @@ import puppeteer from "puppeteer";
 import http from "http";
 
 async function scrape() {
-  const browser = await puppeteer.launch({
-    headless: "new",
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"]
-  });
+const browser = await puppeteer.launch({
+  headless: "new",
+  executablePath: "/usr/bin/chromium",
+  args: ["--no-sandbox", "--disable-setuid-sandbox"]
+});
 
   const page = await browser.newPage();
   await page.goto("https://www.ana.co.jp/ja/jp/international/", {
