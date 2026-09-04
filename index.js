@@ -22,4 +22,4 @@ http.createServer(async (req, res) => {
   const result = await scrape();
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end(result);
-}).listen(8078);
+}).listen(8078, "0.0.0.0");
